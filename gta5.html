@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GTA V</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/jquery-loader.js"></script>
+    <script src="js/jquery-features.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/advanced.js" defer></script>
+</head>
+
+<body>
+<div id="scroll-progress" aria-hidden="true"></div><div id="jq-toast" role="status" aria-live="polite"></div>
+
+<header id="main-header">
+
+    <img src="images/GTA5_logo.png" alt="GTA5_logo" class="logo-gta">
+
+    <nav class="nav-menu" aria-label="Game navigation (use arrow keys)">
+        <a href="index.html">BeamNG.drive</a>
+        <a href="minecraft.html">Minecraft</a>
+        <a href="cyberpunk.html">Cyberpunk 2077</a>
+        <a href="gta5.html">GTA V</a>
+    </nav>
+
+</header>
+
+<aside class="sidebar">
+
+    <h3>Memes corner</h3>
+
+    <p>Internet litteraly has NO good memes with GTA5 or it hid it somewhere real deep. So..</p>
+    <img data-src="images/GTA5_meme.jpg" loading="lazy" alt="GTA5_meme" class="meme">
+
+</aside>
+
+<main>
+    <section class="card controls" aria-label="Display and sound settings">
+        <button id="theme-toggle" type="button" aria-pressed="false">Night mode</button>
+        <button id="sound-toggle" type="button" aria-pressed="false">Sound: off</button>
+        <button id="play-sound" type="button">Test sound</button>
+        <span id="sound-status" role="status"></span>
+    </section>
+
+
+    <section class="card">
+
+        <h2>About GTA V</h2>
+
+        <img data-src="images/gta5.webp" loading="lazy"
+             alt="GTA V game"
+             class="game-image">
+
+        <p>
+            GTA V is an open-world action game. Players can explore Los Santos, drive cars and complete missions.
+        </p>
+
+        <h3>Main Features</h3>
+
+        <ul>
+            <li>Open world</li>
+            <li>Many cars</li>
+            <li>Story missions</li>
+            <li>Online mode</li>
+        </ul>
+
+    </section>
+
+    <section class="card">
+    <h2>Registration Form</h2>
+
+    <form id="registration-form" novalidate>
+        <input type="text" id="reg-name" placeholder="Name" required>
+        <input type="email" id="reg-email" placeholder="Email" required>
+        <input type="password" id="reg-password" placeholder="Password" required>
+        <input type="password" id="reg-confirm" placeholder="Confirm password" required>
+        <button type="submit">Register</button>
+        <p id="reg-message"></p>
+    </form>
+
+    </section>
+
+
+    <section class="card" id="rating-card">
+        <h2>Rate this game</h2>
+        <div class="rating-stars" role="group" aria-label="Choose a rating">
+            <button type="button" class="star" data-rating="1" aria-label="1 out of 5 stars" aria-pressed="false">★</button>
+            <button type="button" class="star" data-rating="2" aria-label="2 out of 5 stars" aria-pressed="false">★</button>
+            <button type="button" class="star" data-rating="3" aria-label="3 out of 5 stars" aria-pressed="false">★</button>
+            <button type="button" class="star" data-rating="4" aria-label="4 out of 5 stars" aria-pressed="false">★</button>
+            <button type="button" class="star" data-rating="5" aria-label="5 out of 5 stars" aria-pressed="false">★</button>
+        </div>
+        <p id="rating-message" role="status">Choose 1 to 5 stars</p>
+    </section>
+
+
+<section class="card jq-panel" id="jquery-tools">
+  <h2>Game Explorer - jQuery Features</h2>
+  <p>Search our games, get suggestions and highlight matching words</p>
+  <label for="live-search">Search games</label>
+  <div class="jq-search-wrap"><input id="live-search" type="search" placeholder="Try Minecraft or action" autocomplete="off" aria-controls="search-suggestions"><ul id="search-suggestions" class="jq-suggestions" hidden></ul></div>
+  <p id="search-count" role="status"></p>
+  <div id="live-game-results" class="jq-game-grid"></div>
+  <label for="highlight-search">Highlight words in this section</label>
+  <div class="jq-inline"><input id="highlight-search" type="search" placeholder="Search page text"><button type="button" id="clear-highlight">Clear</button></div>
+  <div id="highlight-area"><p>Explore Minecraft, BeamNG.drive, Cyberpunk 2077 and GTA V. Discover sandbox adventures, action games and simulation experiences</p><p>Choose your favorite game and enjoy exploring our gaming website</p></div>
+</section>
+<section class="card jq-panel" id="jquery-stats">
+  <h2>Game Stats</h2><p>Animated statistics for our game collection</p>
+  <div class="jq-stats"><div><strong class="jq-counter" data-target="4">0</strong><span>Featured games</span></div><div><strong class="jq-counter" data-target="9">0</strong><span>Gallery picks</span></div><div><strong class="jq-counter" data-target="100">0</strong><span>Fun factor (%)</span></div></div>
+</section>
+<section class="card jq-panel" id="jquery-feedback">
+  <h2>Send feedback</h2><p>Try the loading spinner and notification</p>
+  <form id="jq-feedback-form"><label for="jq-feedback-name">Name</label><input id="jq-feedback-name" required maxlength="40" placeholder="Your name"><label for="jq-feedback-text">Message</label><textarea id="jq-feedback-text" required maxlength="300" placeholder="Your feedback"></textarea><button type="submit" id="jq-submit">Submit feedback</button></form>
+  <p>Share this site with a friend:</p><div class="jq-inline"><input id="jq-copy-text" value="Our Favorite Games - check out our game reviews!" readonly aria-label="Text to copy"><button type="button" id="jq-copy">Copy</button><span id="jq-copy-tip" role="status"></span></div>
+</section>
+
+</main>
+
+<footer>
+    <p>Team Members: Nurbakyt and Anuar</p>
+</footer>
+
+</body>
+
+</html>    
